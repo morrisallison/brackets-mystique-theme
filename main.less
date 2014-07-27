@@ -10,12 +10,8 @@
 	line-height: 18px !important;
 	-webkit-font-smoothing: antialiased !important;	
 	background: #292d2f;
-	color: #d6d7da;
-	text-shadow: 0 -1px 1px #333;
-
-	span.CodeMirror-matchingbracket {
-		color: #7efc7e;
-	}
+	color: #ededed;
+	text-shadow: none;
 }
 .CodeMirror-lines {
 	padding: 40px 0 0 0;
@@ -23,6 +19,9 @@
 .CodeMirror-linenumber {
 	color: #3b3d41;
 	margin-left: 5px;
+}
+.CodeMirror-activeline .CodeMirror-linenumber {
+	color: #4c555a;
 }
 .CodeMirror-code pre {
 	padding: 0 20px;
@@ -41,13 +40,16 @@
 	/* Alignment fix (bug?) */
 	left: 0 !important;
 }
+/*
 .CodeMirror-linewidget {
 	text-shadow: none;
 }
+*/
 .CodeMirror-cursor {
 	border-left: 1px solid #eee !important;
 }
-.CodeMirror-activeline-background {
+.CodeMirror-activeline-background,
+.CodeMirror-activeline .CodeMirror-gutter-elt {
 	background: #333a3f !important;
 	outline: none;
 }
@@ -63,25 +65,33 @@
 .cm-qualifier {
 	color: #bbb;
 }
+.CodeMirror-searching {
+	background-color: #af7f00;
+	box-shadow: none;
+	color: #fff !important;
+	// text-shadow: none;
+	outline: 1px solid #dea919 !important;
+}
 .cm-matchhighlight {
 	border-bottom: 0;
-	outline: 1px solid #ddd;
+	outline: 1px solid #8f9ba7;
 	height: 17px !important;
+	// text-shadow: none;
 }
 .cm-comment {
-	color: #747781;
+	color: #65666a;
 }
 .cm-string {
-	color: #ce7b00;
+	color: #ea9f2e;
 }
 .cm-string-2 {
-	color: #ff6666;
+	color: #ffc774;
 }
 .cm-number {
 	color: #ff6666;
 }
 .cm-atom {
-	color: #c2b470;
+	color: #e0cc6b;
 }
 .cm-property {
 	color: #a3d5a3;
@@ -101,28 +111,31 @@
 	color: #f8f8f8;
 }
 .cm-variable {
-	color: #91b3db;
+	color: #a6c7ee;
 }
 .cm-variable-2 {
 	color: #a3d5a3;
+}
+.cm-variable-3 {
+	color: #e09fc4;
 }
 .cm-def {
 	color: #fff;
 }
 .cm-meta {
-	color: #738c73;
+	color: #809f80;
 }
 .cm-bracket {
 	color: #ebefe7;
 }
 .cm-tag {
-	color: #669199;
+	color: #88b6be;
 }
 .cm-header {
 	color: #a0a;
 }
 .cm-quote {
-	color: #090;
+	color: #489f48;
 }
 .cm-hr {
 	color: #999;
@@ -130,12 +143,8 @@
 .cm-link {
 	color: #00c;
 }
-.CodeMirror-matchingbracket {
-	outline: 1px solid #808080;
-	color: #fff !important;
-}
 .CodeMirror-selected {
-	background: #4d5761 !important;
+	background: #475157 !important;
 }
 
 /* Status Bar */
@@ -157,6 +166,13 @@
 }
 #indent-width-label {
 	color: #999;
+}
+
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+	background: #740d31;
+	outline: 1px solid #8b1840;
+    color: #fff !important;
 }
 
 /* Scrollbars */
