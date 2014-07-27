@@ -175,24 +175,16 @@
 
 /* Scrollbars */
 ::-webkit-scrollbar {
-	background: #38393A;
-	// border-left: 1px solid #464849;
-	// border-right: 1px solid #747779;
+	background: none !important;
+	width: 8px !important;
 }
 ::-webkit-scrollbar-thumb {
-	box-shadow: 0 0 0 12px #161616 inset;
-	// border-left: 1px solid #464849;
-	// border-right: 1px solid #747779;
-}
-::-webkit-scrollbar-thumb:hover,
-::-webkit-scrollbar-thumb:focus {
-	box-shadow: 0 0 0 12px #7a7a7a inset;
-}
-::-webkit-scrollbar-thumb:active {
-	box-shadow: 0 0 0 12px #bbb inset;
+	box-shadow: 0 0 0 12px #1b1c1d inset !important;
+	border-radius: 4px;
+	width: 8px;
 }
 
-/* Editor drop shadow - This is purely cosmetic. */
+/* Editor drop shadow */
 .CodeMirror:after {
 	display: block;
 	position: absolute;
