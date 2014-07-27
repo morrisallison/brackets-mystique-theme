@@ -1,0 +1,8 @@
+node_modules
+npm-debug.log
+.npmignore
+
+.hgignore
+.hgflow
+.hgtags
+.hg_archival.txt
