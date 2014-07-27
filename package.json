@@ -1,0 +1,37 @@
+{
+  "title": "Mystique",
+  "name": "brackets-mystique-theme",
+  "description": "Mystique theme for Brackets",
+  "version": "0.1.0",
+  "homepage": "https://bitbucket.org/web2nr/brackets-mystique-theme",
+  "repository": {
+  "type": "hg",
+    "url": "https://bitbucket.org/web2nr/brackets-mystique-theme"
+  },
+  "author": {
+    "name": "Morris Allison III",
+    "email": "hello@morrisallison.com"
+  },
+  "bugs": {
+   "url": "https://bitbucket.org/web2nr/brackets-mystique-theme/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "brackets": ">=0.42.0"
+  },
+  "theme": {
+    "file": "main.less",
+    "dark": true
+  },
+  "screenshot": "screenshot.png",
+  "keywords": [
+    "bracketsextension",
+    "brackets",
+    "mystique",
+    "theme",
+    "code",
+    "highlighting",
+    "typescript",
+    "dark"
+  ]
+}
