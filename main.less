@@ -1,5 +1,5 @@
 /**
- * Theme: mystique
+ * Theme: Mystique
  */
 
 /* Syntax Highlighting */
@@ -10,7 +10,7 @@
 	line-height: 18px !important;
 	-webkit-font-smoothing: antialiased !important;	
 	background: #292d2f;
-	color: #ededed;
+	color: #bba399;
 	text-shadow: none;
 }
 .CodeMirror-lines {
@@ -21,7 +21,7 @@
 	margin-left: 5px;
 }
 .CodeMirror-activeline .CodeMirror-linenumber {
-	color: #4c555a;
+	color: #5b6469;
 }
 .CodeMirror-code pre {
 	padding: 0 20px;
@@ -54,16 +54,13 @@
 	outline: none;
 }
 .cm-tab {
-	box-shadow: -1px 0 #3b3d41;
+	box-shadow: -1px 0 rgba(239, 249, 255, 0.15) !important;
 }
 .cm-builtin {
 	color: #83c3ce;
 }
 .cm-operator {
 	color: #86b7eb;
-}
-.cm-qualifier {
-	color: #bbb;
 }
 .CodeMirror-searching {
 	background-color: #af7f00;
@@ -73,28 +70,25 @@
 	outline: 1px solid #dea919 !important;
 }
 .cm-matchhighlight {
-	border-bottom: 0;
-	outline: 1px solid #8f9ba7;
+	border-bottom: 1px dotted #adff00;
+	// outline: 1px solid #919ea7;
 	height: 17px !important;
 	// text-shadow: none;
 }
 .cm-comment {
-	color: #65666a;
+	color: rgba(228, 245, 255, 0.3);
 }
 .cm-string {
-	color: #ea9f2e;
+	color: #ffb646;
 }
 .cm-string-2 {
-	color: #ffc774;
+	color: #ffce84;
 }
 .cm-number {
 	color: #ff6666;
 }
 .cm-atom {
 	color: #e0cc6b;
-}
-.cm-property {
-	color: #a3d5a3;
 }
 .cm-attribute {
 	color: #ffb454;
@@ -114,13 +108,13 @@
 	color: #a6c7ee;
 }
 .cm-variable-2 {
-	color: #a3d5a3;
+	color: #cac6c4;
 }
 .cm-variable-3 {
 	color: #e09fc4;
 }
-.cm-def {
-	color: #fff;
+.cm-property {
+	color: #a3d5a3;
 }
 .cm-meta {
 	color: #809f80;
@@ -142,6 +136,10 @@
 }
 .cm-link {
 	color: #00c;
+}
+.cm-qualifier,
+.cm-def {
+	color: #cac6c4;
 }
 .CodeMirror-selected {
 	background: #475157 !important;
