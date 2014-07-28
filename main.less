@@ -7,7 +7,7 @@
 .CodeMirror-scroll {
 	font-family: 'Segoe UI Mono Regular','Segoe UI Mono';
 	font-size: 14px !important;
-	line-height: 18px !important;
+	line-height: 18px;
 	-webkit-font-smoothing: antialiased !important;	
 	background: #292d2f;
 	color: #bba399;
@@ -18,7 +18,6 @@
 }
 .CodeMirror-linenumber {
 	color: #3b3d41;
-	margin-left: 5px;
 }
 .CodeMirror-activeline .CodeMirror-linenumber {
 	color: #5b6469;
@@ -30,23 +29,25 @@
 	span {
 		display: inline-block;
 		height: 20px;
-		line-height: 14px !important;
+		box-sizing: border-box;;
 	}
+}
+.cm-matchhighlight {
+	border-bottom: 1px dotted #adff00;
+	height: 17px;
 }
 .CodeMirror-gutters {
 	background: #292d2f;
-	padding: 0 5px 0 5px;
+	// padding: 0 5px 0 5px;
 	border-right: none;
 	/* Alignment fix (bug?) */
 	left: 0 !important;
 }
-/*
-.CodeMirror-linewidget {
-	text-shadow: none;
-}
-*/
 .CodeMirror-cursor {
 	border-left: 1px solid #eee !important;
+}
+.CodeMirror-gutter-elt {
+	background: #292d2f;
 }
 .CodeMirror-activeline-background,
 .CodeMirror-activeline .CodeMirror-gutter-elt {
@@ -54,7 +55,7 @@
 	outline: none;
 }
 .cm-tab {
-	box-shadow: -1px 0 rgba(239, 249, 255, 0.15) !important;
+	box-shadow: inset 1px 0 rgba(239, 249, 255, 0.15) !important;
 }
 .cm-builtin {
 	color: #83c3ce;
@@ -66,23 +67,16 @@
 	background-color: #af7f00;
 	box-shadow: none;
 	color: #fff !important;
-	// text-shadow: none;
 	outline: 1px solid #dea919 !important;
-}
-.cm-matchhighlight {
-	border-bottom: 1px dotted #adff00;
-	// outline: 1px solid #919ea7;
-	height: 17px !important;
-	// text-shadow: none;
 }
 .cm-comment {
 	color: rgba(228, 245, 255, 0.3);
 }
 .cm-string {
-	color: #ffb646;
+	color: #cc964c;
 }
 .cm-string-2 {
-	color: #ffce84;
+	color: #f46b1f;
 }
 .cm-number {
 	color: #ff6666;
@@ -144,6 +138,37 @@
 .CodeMirror-selected {
 	background: #475157 !important;
 }
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+	background: #740d31;
+	outline: 1px solid #8b1840;
+    color: #fff !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+	background: none !important;
+	width: 8px !important;
+}
+::-webkit-scrollbar-thumb {
+	box-shadow: 0 0 0 12px rgba(12, 12, 12, 0.5) inset !important;
+	border-radius: 4px;
+	width: 8px;
+}
+
+/* Editor drop shadow */
+.CodeMirror:after {
+	display: block;
+	position: absolute;
+	top: -5px;
+	right: 0;
+	bottom: -5px;
+	left: 0;
+	pointer-events: none;
+	box-shadow: inset 0 0 15px 0px rgba(0, 0, 0, 0.3);
+	content: "";
+	z-index: 10;
+}
 
 /* Status Bar */
 #status-bar,
@@ -164,36 +189,4 @@
 }
 #indent-width-label {
 	color: #999;
-}
-
-.CodeMirror-matchingbracket,
-.CodeMirror-matchingtag {
-	background: #740d31;
-	outline: 1px solid #8b1840;
-    color: #fff !important;
-}
-
-/* Scrollbars */
-::-webkit-scrollbar {
-	background: none !important;
-	width: 8px !important;
-}
-::-webkit-scrollbar-thumb {
-	box-shadow: 0 0 0 12px #1b1c1d inset !important;
-	border-radius: 4px;
-	width: 8px;
-}
-
-/* Editor drop shadow */
-.CodeMirror:after {
-	display: block;
-	position: absolute;
-	top: -5px;
-	right: 0;
-	bottom: -5px;
-	left: 0;
-	pointer-events: none;
-	box-shadow: inset 0 0 15px 0px rgba(0, 0, 0, 0.3);
-	content: "";
-	z-index: 10;
 }
