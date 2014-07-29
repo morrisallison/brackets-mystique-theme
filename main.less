@@ -2,19 +2,23 @@
  * Theme: Mystique
  */
 
+// ------------------------------------------------------------
+//    Options
+
 @font-size: 14px;
 @line-height: 20px;
 @scroll-bar-size: 8px;
+@default-color: #cac6c4;
 
-/* Syntax Highlighting */
+// ------------------------------------------------------------
+//    Editor / Syntax Highlighting
+
 .CodeMirror,
 .CodeMirror-scroll {
-	font-family: 'Segoe UI Mono Regular','Segoe UI Mono';
 	font-size: @font-size !important;
 	line-height: @line-height - 2;
-	-webkit-font-smoothing: antialiased !important;	
 	background: #292d2f;
-	color: #bba399;
+	color: @default-color;
 	text-shadow: none;
 }
 .CodeMirror-lines {
@@ -34,6 +38,10 @@
 		height: @line-height;
 		box-sizing: border-box;
 	}
+}
+.cm-global-variable {
+	color: #ff5f5f !important;
+	text-decoration: none !important;
 }
 .cm-matchhighlight {
 	border-bottom: 1px dotted #adff00;
@@ -62,17 +70,10 @@
 	color: #83c3ce;
 }
 .cm-operator {
-	color: #86b7eb;
-}
-
-.CodeMirror-searching {
-	background-color: #af7f00;
-	box-shadow: none;
-	color: #fff !important;
-	outline: 1px solid #dea919 !important;
+	color: #95bfd3;
 }
 .cm-comment {
-	color: rgba(228, 245, 255, 0.3);
+	color: rgba(228, 245, 255, 0.32);
 }
 .cm-string {
 	color: #cc964c;
@@ -104,10 +105,10 @@
 	color: #f8f8f8;
 }
 .cm-variable {
-	color: #a6c7ee;
+	color: #8fbaeb;
 }
 .cm-variable-2 {
-	color: #cac6c4;
+	color: @default-color;
 }
 .cm-variable-3 {
 	color: #e09fc4;
@@ -134,14 +135,20 @@
 	color: #999;
 }
 .cm-link {
-	color: #00c;
+	color: #1313e8;
 }
 .cm-qualifier,
 .cm-def {
-	color: #cac6c4;
+	color: @default-color;
 }
 .CodeMirror-selected {
 	background: #475157 !important;
+}
+.CodeMirror-searching {
+	background-color: #af7f00;
+	box-shadow: none;
+	color: #fff !important;
+	outline: 1px solid #dea919 !important;
 }
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag {
@@ -150,7 +157,9 @@
     color: #fff !important;
 }
 
-/* Code Folding */
+// ------------------------------------------------------------
+//    Code Folding
+
 .CodeMirror-foldgutter,
 .CodeMirror-foldgutter-open,
 .CodeMirror-foldgutter,
@@ -159,13 +168,16 @@
     color: #5b6469;
 }
 .CodeMirror-widget .CodeMirror-foldmarker {
-	line-height: @font-size;
+	line-height: @font-size !important;
+	height: @font-size + 2 !important;
 	background: #0d4c73;
 	border: 1px solid #185f8c;
 	color: #fff;
 }
 
-/* Scrollbars */
+// ------------------------------------------------------------
+//    Scrollbars
+
 ::-webkit-scrollbar {
 	background: none !important;
 	height: @scroll-bar-size !important;
@@ -186,7 +198,9 @@
 	height: @scroll-bar-size;
 }
 
-/* Editor drop shadow */
+// ------------------------------------------------------------
+//    Editor drop shadow
+
 .CodeMirror:after {
 	display: block;
 	position: absolute;
@@ -200,7 +214,9 @@
 	z-index: 10;
 }
 
-/* Status Bar */
+// ------------------------------------------------------------
+//    Status Bar
+
 #status-bar,
 #status-indicators {
 	background-color: #222;
