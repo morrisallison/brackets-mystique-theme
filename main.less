@@ -33,7 +33,7 @@
 .CodeMirror-code pre {
 	height: @line-height;
 
-	span {
+	> span {
 		display: inline-block;
 		height: @line-height;
 		box-sizing: border-box;
@@ -49,8 +49,6 @@
 .CodeMirror-gutters {
 	background: #292d2f;
 	border-right: none;
-	/* Alignment fix (bug?) */
-	left: 0 !important;
 }
 .CodeMirror-cursor {
 	border-left: 1px solid #eee !important;
@@ -60,11 +58,11 @@
 }
 .CodeMirror-activeline-background,
 .CodeMirror-activeline .CodeMirror-gutter-elt {
-	background: #333a3f !important;
+	background: #333a3f;
 	outline: none;
 }
 .cm-tab {
-	box-shadow: inset 1px 0 rgba(239, 249, 255, 0.15) !important;
+	box-shadow: inset 1px 0 rgba(239, 249, 255, 0.15);
 }
 .cm-builtin {
 	color: #83c3ce;
@@ -93,16 +91,12 @@
 .cm-keyword {
 	color: #6b85ff;
 }
-.cm-error {
-	height: @line-height !important;
-	line-height: @font-size;
-	border: 1px solid #c32e17;
-	background: #b24838;
+.cm-invalidchar,
+.cm-error {	
+	outline: 1px solid #e66351;
+	background: #c14a3a;
+	padding: 2px 0;
 	color: #ddd;
-}
-.cm-invalidchar {
-	background: #d8290d;
-	color: #f8f8f8;
 }
 .cm-variable {
 	color: #8fbaeb;
@@ -142,13 +136,7 @@
 	color: @default-color;
 }
 .CodeMirror-selected {
-	background: #475157 !important;
-}
-.CodeMirror-searching {
-	background-color: #af7f00;
-	box-shadow: none;
-	color: #fff !important;
-	outline: 1px solid #dea919 !important;
+	background: #475157;
 }
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag {
@@ -156,7 +144,12 @@
 	outline: 1px solid #8b1840;
     color: #fff !important;
 }
-
+.CodeMirror-searching {
+	background-color: #af7f00;
+	box-shadow: none;
+	outline: 1px solid #dea919;
+	color: #fff !important;
+}
 // ------------------------------------------------------------
 //    Code Folding
 
@@ -168,8 +161,10 @@
     color: #5b6469;
 }
 .CodeMirror-widget .CodeMirror-foldmarker {
+	font-family: sans-serif;
 	line-height: @font-size !important;
-	height: @font-size + 2 !important;
+	height: @font-size !important;
+	padding-bottom: 2px;
 	background: #0d4c73;
 	border: 1px solid #185f8c;
 	color: #fff;
@@ -180,8 +175,8 @@
 
 ::-webkit-scrollbar {
 	background: none !important;
-	height: @scroll-bar-size !important;
-	width: @scroll-bar-size !important;
+	height: @scroll-bar-size;
+	width: @scroll-bar-size;
 }
 ::-webkit-scrollbar-thumb {
 	box-shadow: 0 0 0 12px rgba(12, 12, 12, 0.5) inset !important;
