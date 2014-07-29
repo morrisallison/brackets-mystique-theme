@@ -2,12 +2,16 @@
  * Theme: Mystique
  */
 
+@font-size: 14px;
+@line-height: 20px;
+@scroll-bar-size: 8px;
+
 /* Syntax Highlighting */
 .CodeMirror,
 .CodeMirror-scroll {
 	font-family: 'Segoe UI Mono Regular','Segoe UI Mono';
-	font-size: 14px !important;
-	line-height: 18px;
+	font-size: @font-size !important;
+	line-height: @line-height - 2;
 	-webkit-font-smoothing: antialiased !important;	
 	background: #292d2f;
 	color: #bba399;
@@ -17,18 +21,18 @@
 	padding: 40px 0 0 0;
 }
 .CodeMirror-linenumber {
-	color: #3b3d41;
+	color: #45484e;
 }
 .CodeMirror-activeline .CodeMirror-linenumber {
 	color: #5b6469;
 }
 .CodeMirror-code pre {
-	height: 20px;
+	height: @line-height;
 
 	span {
 		display: inline-block;
-		height: 20px;
-		box-sizing: border-box;;
+		height: @line-height;
+		box-sizing: border-box;
 	}
 }
 .cm-matchhighlight {
@@ -60,6 +64,7 @@
 .cm-operator {
 	color: #86b7eb;
 }
+
 .CodeMirror-searching {
 	background-color: #af7f00;
 	box-shadow: none;
@@ -88,8 +93,11 @@
 	color: #6b85ff;
 }
 .cm-error {
-	background: #d8290d;
-	color: #f8f8f8;
+	height: @line-height !important;
+	line-height: @font-size;
+	border: 1px solid #c32e17;
+	background: #b24838;
+	color: #ddd;
 }
 .cm-invalidchar {
 	background: #d8290d;
@@ -142,25 +150,40 @@
     color: #fff !important;
 }
 
+/* Code Folding */
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-blank {
+    color: #5b6469;
+}
+.CodeMirror-widget .CodeMirror-foldmarker {
+	line-height: @font-size;
+	background: #0d4c73;
+	border: 1px solid #185f8c;
+	color: #fff;
+}
+
 /* Scrollbars */
 ::-webkit-scrollbar {
 	background: none !important;
-	height: 8px !important;
-	width: 8px !important;
+	height: @scroll-bar-size !important;
+	width: @scroll-bar-size !important;
 }
 ::-webkit-scrollbar-thumb {
 	box-shadow: 0 0 0 12px rgba(12, 12, 12, 0.5) inset !important;
-	border-radius: 4px;
-	width: 8px;
+	border-radius: @scroll-bar-size / 2;
+	width: @scroll-bar-size;
 }
 .CodeMirror-gutter-filler {
 	background: none;
-	height: 8px;
+	height: @scroll-bar-size;
 }
 .CodeMirror-scrollbar-filler {
 	background: none;
-	width: 8px;
-	height: 8px;
+	width: @scroll-bar-size;
+	height: @scroll-bar-size;
 }
 
 /* Editor drop shadow */
