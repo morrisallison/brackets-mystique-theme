@@ -8,6 +8,8 @@
 @line-height: 20px;
 @scroll-bar-size: 8px;
 @neutral-color: #cac6c4;
+@search-background-color: #af7f00;
+@search-outline-color: #dea919;
 
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
@@ -161,9 +163,9 @@
     color: #fff !important;
 }
 .CodeMirror-searching {
-	background-color: #af7f00;
+	background-color: @search-background-color;
 	box-shadow: none;
-	outline: 1px solid #dea919;
+	outline: 1px solid @search-outline-color;
 	color: #fff !important;
 }
 
@@ -206,6 +208,14 @@
 	background: none;
 	width: @scroll-bar-size;
 	height: @scroll-bar-size;
+}
+.tickmark-track,
+.tickmark-track .tickmark {
+	width: 8px;
+}
+.tickmark-track .tickmark {
+	background-color: @search-background-color;
+	border-color: @search-outline-color;
 }
 
 // ------------------------------------------------------------
