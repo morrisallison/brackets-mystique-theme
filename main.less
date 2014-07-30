@@ -1,20 +1,22 @@
-/**
- * Theme: Mystique
- */
+/*                    _   _                  
+      /\/\  _   _ ___| |_(_) __ _ _   _  ___ 
+     /    \| | | / __| __| |/ _` | | | |/ _ \
+    / /\/\ \ |_| \__ \ |_| | (_| | |_| |  __/
+    \/    \/\__, |___/\__|_|\__, |\__,_|\___|
+            |___/              |_|           
+*/
 
 // ------------------------------------------------------------
 //    Options
 
 @line-height: 20px;
 @scroll-bar-size: 8px;
-@neutral-color: #cac6c4;
-@search-background-color: #af7f00;
-@search-outline-color: #dea919;
 
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
 
-/* Structure */
+/*    Structure    */
+
 .CodeMirror-searching,
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag,
@@ -40,7 +42,12 @@
 	box-sizing: border-box;
 }
 
-/* Style */
+/*    Style    */
+
+@neutral-color: #cac6c4;
+@search-background-color: #af7f00;
+@search-outline-color: #dea919;
+
 .CodeMirror,
 .CodeMirror-scroll {
 	background: #292d2f;
@@ -160,7 +167,7 @@
 .CodeMirror-matchingtag {
 	background: #740d31;
 	outline: 1px solid #8b1840;
-    color: #fff !important;
+	color: #fff !important;
 }
 .CodeMirror-searching {
 	background-color: @search-background-color;
@@ -177,7 +184,7 @@
 .CodeMirror-foldgutter,
 .CodeMirror-foldgutter-folded,
 .CodeMirror-foldgutter-blank {
-    color: #5b6469;
+	color: #5b6469;
 }
 .CodeMirror-widget .CodeMirror-foldmarker {
 	font-family: sans-serif;
