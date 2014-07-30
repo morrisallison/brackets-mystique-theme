@@ -5,7 +5,6 @@
 // ------------------------------------------------------------
 //    Options
 
-@font-size: 14px;
 @line-height: 20px;
 @scroll-bar-size: 8px;
 @default-color: #cac6c4;
@@ -13,10 +12,35 @@
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
 
+/* Structure */
+.CodeMirror-searching,
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag,
+.cm-invalidchar,
+.cm-error,
+.cm-tab,
 .CodeMirror,
 .CodeMirror-scroll {
-	font-size: @font-size !important;
 	line-height: @line-height - 2;
+}
+.CodeMirror-code pre {
+	height: @line-height;
+}
+.CodeMirror-code pre > span,
+.CodeMirror-searching,
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag,
+.cm-invalidchar,
+.cm-error,
+.cm-tab {
+	display: inline-block;
+	height: @line-height;
+	box-sizing: border-box;
+}
+
+/* Style */
+.CodeMirror,
+.CodeMirror-scroll {
 	background: #292d2f;
 	color: @default-color;
 	text-shadow: none;
@@ -29,15 +53,6 @@
 }
 .CodeMirror-activeline .CodeMirror-linenumber {
 	color: #5b6469;
-}
-.CodeMirror-code pre {
-	height: @line-height;
-
-	> span {
-		display: inline-block;
-		height: @line-height;
-		box-sizing: border-box;
-	}
 }
 .cm-global-variable {
 	color: #ff5f5f !important;
@@ -95,7 +110,6 @@
 .cm-error {	
 	outline: 1px solid #e66351;
 	background: #c14a3a;
-	padding: 2px 0;
 	color: #ddd;
 }
 .cm-variable {
@@ -165,8 +179,6 @@
 }
 .CodeMirror-widget .CodeMirror-foldmarker {
 	font-family: sans-serif;
-	line-height: @font-size !important;
-	height: @font-size !important;
 	padding-bottom: 2px;
 	background: #0d4c73;
 	border: 1px solid #185f8c;
