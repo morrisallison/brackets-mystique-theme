@@ -141,17 +141,6 @@
 }
 .cm-quote {
 	color: darken(@neutral-color, 15%);
-	
-	&:before {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: -10px;
-		bottom: 0;
-		pointer-events: none;
-		content: "";
-		border-left: 3px solid darken(@neutral-color, 40%);
-	}
 }
 .cm-hr {
 	.cm-comment;
@@ -235,8 +224,9 @@
 }
 
 // ------------------------------------------------------------
-//    Editor drop shadow
+//    Extras
 
+// Editor drop shadow
 .CodeMirror:after {
 	display: block;
 	position: absolute;
@@ -249,7 +239,17 @@
 	content: "";
 	z-index: 10;
 }
-
+// Blockquote bar
+.cm-quote:before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -10px;
+	bottom: 0;
+	pointer-events: none;
+	content: "";
+	border-left: 3px solid darken(@neutral-color, 40%);
+}
 // ------------------------------------------------------------
 //    Status Bar
 
