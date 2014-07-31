@@ -48,7 +48,6 @@
 @neutral-color: #cac6c4;
 @search-background-color: #af7f00;
 @search-outline-color: #dea919;
-@quote-color: darken(@neutral-color, 15%);
 
 .CodeMirror,
 .CodeMirror-scroll {
@@ -141,7 +140,7 @@
 	color: #6b85ff;
 }
 .cm-quote {
-	color: @quote-color;
+	color: darken(@neutral-color, 15%);
 	
 	&:before {
 		display: block;
