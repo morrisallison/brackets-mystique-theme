@@ -180,6 +180,11 @@
 	outline: 1px solid @search-outline-color;
 	color: #fff !important;
 }
+// JavaScript Globals Extension
+.cm-global-variable {
+	color: #ff5f5f !important;
+	text-decoration: none !important;
+}
 
 // ------------------------------------------------------------
 //    Code Folding Extension
@@ -245,27 +250,6 @@
 	content: "";
 	z-index: 10;
 }
-
-// ------------------------------------------------------------
-//    Language specfic styles
-
-.doctype-markdown {
-	.cm-comment {
-		color: @quote-color;
-	}
-	.cm-variable-2 {
-		.cm-property;
-	}
-}
-.doctype-javascript {
-	/* JavaScript Globals Extension */
-	.cm-global-variable {
-		color: #ff5f5f !important;
-		text-decoration: none !important;
-	}
-}
-.doctype-typescript {}
-.doctype-php {}
 
 // ------------------------------------------------------------
 //    Status Bar
