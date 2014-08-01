@@ -1,26 +1,257 @@
-/**
- * Theme BoilerPlate Copyright (c) 2014 Miguel Castillo.
- *
- * Licensed under MIT
- */
+/*
+                      _   _                  
+      /\/\  _   _ ___| |_(_) __ _ _   _  ___ 
+     /    \| | | / __| __| |/ _` | | | |/ _ \
+    / /\/\ \ |_| \__ \ |_| | (_| | |_| |  __/
+    \/    \/\__, |___/\__|_|\__, |\__,_|\___|
+            |___/              |_|           
 
+	https://bitbucket.org/web2nr/brackets-mystique-theme
+	Copyright (c) 2014 Morris Allison III <hello@morrisallison.com>
+	Released under the MIT License.
+*/
+
+// ------------------------------------------------------------
+//    Options
+
+@line-height: 18px;
+@scroll-bar-size: 8px;
+
+// ------------------------------------------------------------
+//    Editor / Syntax Highlighting
+
+/*    Structure    */
+
+.CodeMirror-searching,
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag,
+.cm-invalidchar,
+.cm-error,
+.cm-tab,
+.CodeMirror,
 .CodeMirror-scroll {
-    padding-left: 2px;
-    background-color: #696969;
+	line-height: @line-height;
+}
+.CodeMirror-code pre {
+	height: @line-height;
+}
+.CodeMirror-code pre > span,
+.CodeMirror-searching,
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag,
+.cm-invalidchar,
+.cm-error,
+.cm-tab {
+	display: inline-block;
+	height: @line-height;
+	box-sizing: border-box;
 }
 
-.CodeMirror-scroll pre * {
-    color: yellow !important;
-}
+/*    Style    */
 
+@neutral-color: #cacdd3;
+@search-background-color: #af7f00;
+@search-outline-color: #dea919;
+
+.CodeMirror,
+.CodeMirror-scroll {
+	background: #292d2f;
+	color: @neutral-color;
+	text-shadow: none;
+}
+.CodeMirror-lines {
+	padding-top: (@line-height * 2);
+}
 .CodeMirror-linenumber {
-    color: brown !important;
+	color: #45484e;
 }
-
+.CodeMirror-activeline .CodeMirror-linenumber {
+	color: #5b6469;
+}
+.cm-matchhighlight {
+	border-bottom: 1px dotted #adff00;
+}
+.CodeMirror-gutters {
+	background: none;
+	border-right: none;
+}
 .CodeMirror-cursor {
-    border-left-color: red !important;
+	border-color: #eee !important;
+}
+.CodeMirror-gutter-elt {
+	background: #292d2f;
+}
+.CodeMirror-activeline-background,
+.CodeMirror-activeline .CodeMirror-gutter-elt {
+	background: #333a3f;
+	outline: none;
+}
+.cm-tab {
+	box-shadow: inset 1px 0 rgba(239, 249, 255, 0.15);
+}
+.cm-builtin {
+	color: #83c3ce;
+}
+.cm-operator {
+	color: #95bfd3;
+}
+.cm-hr,
+.cm-comment {
+	color: rgba(228, 245, 255, 0.32);
+}
+.cm-string {
+	color: #cc8b31;
+}
+.cm-string-2 {
+	color: #f46b1f;
+}
+.cm-number {
+	color: #ff6666;
+}
+.cm-atom {
+	color: #d4b56d;
+}
+.cm-attribute {
+	color: #ffb454;
+}
+.cm-keyword {
+	color: #6b85ff;
+}
+.cm-invalidchar,
+.cm-error {	
+	outline: 1px solid #e66351;
+	background: #c14a3a;
+	color: #ddd;
+}
+.cm-variable {
+	color: #8fbaeb;
+}
+.cm-variable-2 {
+	color: #9bd4cb;
+}
+.cm-variable-3 {
+	color: #e09fc4;
+}
+.cm-property {
+	color: #a3d5a3;
+}
+.cm-meta {
+	color: #809f80;
+}
+.cm-tag {
+	color: #88b6be;
+}
+.cm-header {
+	color: #6b85ff;
+}
+.cm-quote {
+	color: darken(@neutral-color, 15%);
+}
+.cm-link {
+	color: #4994eb;
+	text-decoration: underline;
+}
+.cm-qualifier,
+.cm-def {
+	color: @neutral-color;
+}
+.CodeMirror-selected {
+	background: #475157;
+}
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+	background: #740d31;
+	outline: 1px solid #8b1840;
+	color: #fff !important;
+}
+.CodeMirror-searching {
+	background-color: @search-background-color;
+	box-shadow: none;
+	outline: 1px solid @search-outline-color;
+	color: #fff !important;
 }
 
-.CodeMirror-matchingbracket {
-    background-color: black;
+// ------------------------------------------------------------
+//    "JavaScript Globals" Extension
+
+.cm-global-variable {
+	color: #ff5f5f !important;
+	text-decoration: none !important;
+}
+
+// ------------------------------------------------------------
+//    "Code Folding" Extension
+
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-blank {
+	color: #5b6469;
+}
+.CodeMirror-widget .CodeMirror-foldmarker {
+	font-family: sans-serif;
+	padding-bottom: 2px;
+	background: #0d4c73;
+	border: 1px solid #185f8c;
+	color: #fff;
+}
+
+// ------------------------------------------------------------
+//    Scrollbars
+
+::-webkit-scrollbar {
+	background: none !important;
+	height: @scroll-bar-size;
+	width: @scroll-bar-size;
+}
+::-webkit-scrollbar-thumb {
+	box-shadow: 0 0 0 12px rgba(12, 12, 12, 0.5) inset !important;
+	border-radius: @scroll-bar-size / 2;
+	width: @scroll-bar-size;
+}
+.CodeMirror-gutter-filler {
+	background: none;
+	height: @scroll-bar-size;
+}
+.CodeMirror-scrollbar-filler {
+	background: none;
+	width: @scroll-bar-size;
+	height: @scroll-bar-size;
+}
+.tickmark-track,
+.tickmark-track .tickmark {
+	width: 8px;
+}
+.tickmark-track .tickmark {
+	background-color: @search-background-color;
+	border-color: @search-outline-color;
+}
+
+// ------------------------------------------------------------
+//    Extras
+
+.CodeMirror:after,
+.cm-quote:before {
+	display: block;
+	position: absolute;
+	pointer-events: none;
+	content: "";
+}
+	
+// Editor drop shadow
+.CodeMirror:after {
+	top: -5px;
+	right: 0;
+	bottom: -5px;
+	left: 0;
+	box-shadow: inset 0 0 15px 0px rgba(0, 0, 0, 0.3);
+	z-index: 10;
+}
+// Blockquote bar
+.cm-quote:before {
+	top: 0;
+	left: -10px;
+	bottom: 0;
+	border-left: 3px solid darken(@neutral-color, 40%);
 }
