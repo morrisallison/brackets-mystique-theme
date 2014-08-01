@@ -1,6 +1,8 @@
 # Mystique
 
-Mystique theme for Brackets. A style that I have pieced together over years.
+Mystique theme for [Brackets](https://github.com/adobe/brackets). A style that I have pieced together over years.
+
+Requires Brackets version 0.42.0 or later. You can install this theme via the extension manager within Brackets.
 
 #### HTML
 
