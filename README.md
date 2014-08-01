@@ -4,29 +4,37 @@ Mystique theme for [Brackets](https://github.com/adobe/brackets). A style that I
 
 Requires Brackets version 0.42.0 or later. You can install this theme via the extension manager within Brackets.
 
-#### HTML
+### Options
 
-![HTML Screenshot](https://bytebucket.org/web2nr/brackets-mystique-theme/raw/e6758ea13ebbbf6ad63de4a0657440536468b8c5/screenshots/html.png)
+The theme's stylesheet currently contains `@line-height` and `@scroll-bar-size` variables.
 
-#### LESS / CSS
+## Screenshots
 
-![ESS / CSS Screenshot](https://bytebucket.org/web2nr/brackets-mystique-theme/raw/e6758ea13ebbbf6ad63de4a0657440536468b8c5/screenshots/less.png)
+The font used in the screenshots is "Segoe UI Mono Regular".
 
-#### JS
+### HTML
 
-![JS Screenshot](https://bytebucket.org/web2nr/brackets-mystique-theme/raw/e6758ea13ebbbf6ad63de4a0657440536468b8c5/screenshots/js.png)
+![HTML Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/html.png)
 
-#### PHP
+### LESS / CSS
 
-![JS Screenshot](https://bytebucket.org/web2nr/brackets-mystique-theme/raw/e6758ea13ebbbf6ad63de4a0657440536468b8c5/screenshots/php.png)
+![ESS / CSS Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/less.png)
 
-#### Markdown
+### JavaScript
 
-![JS Screenshot](https://bytebucket.org/web2nr/brackets-mystique-theme/raw/e6758ea13ebbbf6ad63de4a0657440536468b8c5/screenshots/md.png)
+![JavaScript Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/js.png)
 
-#### JSON
+### PHP
 
-![JS Screenshot](https://bytebucket.org/web2nr/brackets-mystique-theme/raw/e6758ea13ebbbf6ad63de4a0657440536468b8c5/screenshots/json.png)
+![PHP Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/php.png)
+
+### Markdown
+
+![Markdown Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/md.png)
+
+### JSON
+
+![JSON Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/json.png)
 
 ## License
 
