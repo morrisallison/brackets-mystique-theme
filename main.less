@@ -53,8 +53,8 @@
 .CodeMirror-scroll {
 	line-height: @line-height;
 }
-.CodeMirror-code pre {
-	height: @line-height;
+.CodeMirror .CodeMirror-code pre {
+	min-height: @line-height;
 }
 .CodeMirror-code pre > span,
 .CodeMirror-searching,
@@ -66,6 +66,13 @@
 	display: inline-block;
 	height: @line-height;
 	box-sizing: border-box;
+}
+.CodeMirror-wrap .CodeMirror-code {
+	pre,
+	span {
+		display: inline;
+		height: auto;
+	}
 }
 
 /*    Style    */
