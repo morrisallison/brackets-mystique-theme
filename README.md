@@ -2,7 +2,7 @@
 
 Mystique theme for [Brackets](https://github.com/adobe/brackets). A style that I have pieced together over years.
 
-Requires Brackets version 0.42.0 or later. You can install this theme via the extension manager within Brackets.
+Requires Brackets version 0.42.0 or later. You can install this theme via the Extension Manager within Brackets.
 
 ### Options
 
@@ -18,7 +18,7 @@ The font used in the screenshots is "Segoe UI Mono Regular".
 
 ### LESS / CSS
 
-![ESS / CSS Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/less.png)
+![LESS / CSS Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/less.png)
 
 ### JavaScript
 
