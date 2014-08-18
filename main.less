@@ -110,6 +110,9 @@
 	background: #333a3f;
 	outline: none;
 }
+.cm-bracket {
+	color: @neutral-color;
+}
 .cm-tab {
 	box-shadow: inset 1px 0 rgba(239, 249, 255, 0.15);
 }
@@ -140,6 +143,10 @@
 }
 .cm-keyword {
 	color: #6b85ff;
+}
+.cm-qualifier,
+.cm-def{
+	color: @neutral-color
 }
 .cm-invalidchar,
 .cm-error {
@@ -174,10 +181,6 @@
 .cm-link {
 	color: #4994eb;
 	text-decoration: underline;
-}
-.cm-qualifier,
-.cm-def {
-	color: @neutral-color;
 }
 .CodeMirror-selected {
 	background: #475157;
