@@ -4,7 +4,11 @@
 	"title": "Mystique",
 	"description": "A soft, dark theme that makes code look good.",
 	"homepage": "https://bitbucket.org/web2nr/brackets-mystique-theme",
-	"author": "Morris Allison III (https://bitbucket.org/web2nr)",
+	"author": {
+		"name": "Morris Allison III",
+		"email": "hello@morrisallison.com",
+		"url": "https://bitbucket.org/web2nr"
+	},
 	"license": "MIT",
 	"screenshot": "screenshots/js.png",
 	"engines": {
