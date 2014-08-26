@@ -4,6 +4,13 @@ Mystique theme for [Brackets](https://github.com/adobe/brackets). A style that I
 
 Requires Brackets version 0.42.0 or later. You can install this theme via the Extension Manager within Brackets.
 
+Styles have been added to support the following extensions:
+
+* QuickDocsJS
+* QuickDocsPHP
+* JavaScript Globals
+* Code Folding
+
 ### Options
 
 The theme's stylesheet currently contains `@line-height` and `@scroll-bar-size` variables.

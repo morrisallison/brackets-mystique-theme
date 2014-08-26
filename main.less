@@ -37,6 +37,7 @@
 @background-color: #292d2f;
 @search-background-color: #af7f00;
 @search-outline-color: #dea919;
+@line-color: #5b6469;
 
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
@@ -90,7 +91,7 @@
 	color: #45484e;
 }
 .CodeMirror-activeline .CodeMirror-linenumber {
-	color: #5b6469;
+	color: @line-color;
 }
 .cm-matchhighlight {
 	border-bottom: 1px dotted #adff00;
@@ -109,6 +110,9 @@
 .CodeMirror-activeline .CodeMirror-gutter-elt {
 	background: #333a3f;
 	outline: none;
+}
+.cm-bracket {
+	color: @neutral-color;
 }
 .cm-tab {
 	box-shadow: inset 1px 0 rgba(239, 249, 255, 0.15);
@@ -140,6 +144,10 @@
 }
 .cm-keyword {
 	color: #6b85ff;
+}
+.cm-qualifier,
+.cm-def{
+	color: @neutral-color
 }
 .cm-invalidchar,
 .cm-error {
@@ -175,10 +183,6 @@
 	color: #4994eb;
 	text-decoration: underline;
 }
-.cm-qualifier,
-.cm-def {
-	color: @neutral-color;
-}
 .CodeMirror-selected {
 	background: #475157;
 }
@@ -193,6 +197,67 @@
 	box-shadow: none;
 	outline: 1px solid @search-outline-color;
 	color: #fff !important;
+}
+
+// ------------------------------------------------------------
+//    Line Widget
+
+/**
+ * Supports for the "QuickDocsJS" and "QuickDocsPHP" extensions
+ */
+.CodeMirror-linewidget {
+
+	.inline-widget {
+
+		background-color: #1b1e21;
+
+		h1 {
+			color: #c4c7d0;
+		}
+
+		dt,
+		b,
+		strong {
+			color: #c4c7d0;
+		}
+
+		p,
+		dd,
+		.php-prop-summary,
+		.php-prop-values,
+		.js-prop-summary > div {
+			color: #a3a6ad;
+		}
+		.css-prop-defn a.more-info,
+		.bottom-links a {
+			background-color: #3f4850;
+			border: 1px solid #192025;
+			box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+			color: #c9cdcf;
+			text-shadow: 0 1px 0 #232a30;
+
+			&:hover {
+				background-color: #2a465c;
+				border: 1px solid #0f2231;
+				box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+				color: #c9cdcf;
+				text-shadow: 0 1px 0 #162938;
+			}
+		}
+
+		.divider {
+			border-right-color: #0f0f0f;
+			border-left-color: #2f2f36;
+		}
+
+		.close {
+			color: @line-color;
+		}
+
+		code {
+			.cm-atom;
+		}
+	}
 }
 
 // ------------------------------------------------------------
@@ -226,12 +291,12 @@
 // ------------------------------------------------------------
 //    "Code Folding" Extension
 
-.CodeMirror-foldgutter,
 .CodeMirror-foldgutter-open,
-.CodeMirror-foldgutter,
 .CodeMirror-foldgutter-folded,
 .CodeMirror-foldgutter-blank {
-	color: #5b6469;
+	&:after {
+		color: @line-color;
+	}
 }
 .CodeMirror-widget .CodeMirror-foldmarker {
 	display: inline-block;
