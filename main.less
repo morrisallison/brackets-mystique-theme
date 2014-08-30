@@ -186,6 +186,11 @@
 .CodeMirror-selected {
 	background: #475157;
 }
+.CodeMirror.find-highlighting .CodeMirror-selected {
+	background: #b40068;
+	box-shadow: 0 0 0 1px #ff00ce;
+	border-radius: 0;
+}
 .CodeMirror-matchingbracket,
 .CodeMirror-matchingtag {
 	background: #740d31;
@@ -193,10 +198,11 @@
 	color: #fff !important;
 }
 .CodeMirror-searching {
-	background-color: @search-background-color;
+	background-color: rgba(240, 178, 24, 0.65);
 	box-shadow: none;
-	outline: 1px solid @search-outline-color;
+	outline: 1px solid rgba(255, 223, 101, 0.65);
 	color: #fff !important;
+	border-radius: 0;
 }
 
 // ------------------------------------------------------------
@@ -336,8 +342,8 @@
 	width: 8px;
 }
 .tickmark-track .tickmark {
-	background-color: @search-background-color;
-	border-color: @search-outline-color;
+	background-color: #af7f00;
+	border-color: #dea919;
 }
 
 // ------------------------------------------------------------
