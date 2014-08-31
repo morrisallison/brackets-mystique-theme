@@ -208,6 +208,12 @@
 	outline: 1px solid @search-outline-color;
 	color: #fff !important;
 	border-radius: 0;
+	border-bottom: none;
+
+	&.searching-current-match {
+		background-color: spin(@search-background-color, 150);
+		outline-color: spin(@search-outline-color, 150);
+	}
 }
 
 // ------------------------------------------------------------
