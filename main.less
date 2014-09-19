@@ -40,6 +40,7 @@
 @line-color: #5b6469;
 @search-background-color: #af7f00;
 @search-outline-color: #dea919;
+@activeline-background: #333a3f;
 
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
@@ -92,8 +93,17 @@
 .CodeMirror-linenumber {
 	color: #45484e;
 }
-.CodeMirror-activeline .CodeMirror-linenumber {
-	color: @line-color;
+.CodeMirror-activeline > .CodeMirror-gutter-wrapper {
+	> .CodeMirror-linenumber {
+		color: @line-color;
+	}
+	> .CodeMirror-gutter-elt {
+		background: @activeline-background;
+		outline: none;
+	}
+}
+.CodeMirror-activeline-background {
+	background: @activeline-background;
 }
 .cm-bracket {
 	color: @neutral-color;
@@ -110,11 +120,6 @@
 }
 .CodeMirror-gutter-elt {
 	background: #292d2f;
-}
-.CodeMirror-activeline-background,
-.CodeMirror-activeline .CodeMirror-gutter-elt {
-	background: #333a3f;
-	outline: none;
 }
 .cm-bracket {
 	color: @neutral-color;
@@ -273,6 +278,21 @@
 
 		code {
 			.cm-atom;
+		}
+	}
+	.inline-text-editor {
+		.inline-editor-header {
+			padding: 5px 10px 5px 40px;
+		}
+		.CodeMirror-lines {
+			padding-top: 0;
+		}
+		.CodeMirror-gutter {
+			background: #292d2f;
+		}
+		.CodeMirror {
+			background: #292d2f;
+			padding: 15px 0 5px 0;
 		}
 	}
 }
