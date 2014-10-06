@@ -30,6 +30,7 @@
 @background-color: #292d2f;
 @line-color: #5b6469;
 @search-background-color: #af7f00;
+@inline-editor-background-color: #202425;
 @search-outline-color: #dea919;
 @activeline-background: #333a3f;
 
@@ -269,18 +270,28 @@
 		}
 	}
 	.inline-text-editor {
+		background-color: #393d3f;
+
 		.inline-editor-header {
 			padding: 5px 10px 5px 40px;
 		}
-		.CodeMirror-lines {
+		.codemirror-linenumber,
+		.codemirror-gutter,
+		.codemirror {
+			background: @inline-editor-background-color;
+		}
+		.codemirror-lines {
 			padding-top: 0;
 		}
-		.CodeMirror-gutter {
-			background: #292d2f;
-		}
-		.CodeMirror {
-			background: #292d2f;
+		.codemirror {
 			padding: 15px 0 5px 0;
+		}
+		.codemirror-linenumber {
+			color: #45484e;
+			background: @inline-editor-background-color;
+		}
+		.codemirror-activeline-background {
+			background: @activeline-background;
 		}
 	}
 }
