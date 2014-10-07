@@ -2,7 +2,7 @@
 
 Mystique theme for [Brackets](https://github.com/adobe/brackets). A style that I have pieced together over years.
 
-Requires Brackets version 0.43.0 or later. You can install this theme via the Extension Manager within Brackets.
+Requires Brackets version 0.44.0 or later. You can install this theme via the Extension Manager within Brackets.
 
 Styles have been added to support the following extensions:
 
