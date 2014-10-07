@@ -12,7 +12,7 @@
 	"license": "MIT",
 	"screenshot": "screenshots/js.png",
 	"engines": {
-		"brackets": ">=0.43.0"
+		"brackets": ">=0.44.0"
 	},
 	"theme": {
 		"file": "main.less",
