@@ -1,8 +1,8 @@
 # Mystique
 
-Mystique theme for [Brackets](https://github.com/adobe/brackets). A style that I have pieced together over years.
+Mystique theme for [Brackets](http://brackets.io/). A style that I have pieced together over years.
 
-Requires Brackets version 0.44.0 or later. You can install this theme via the Extension Manager within Brackets.
+Requires Brackets version 1.2.0 or later. You can install this theme via the Extension Manager within Brackets.
 
 Styles have been added to support the following extensions:
 
@@ -17,31 +17,15 @@ The theme's stylesheet currently contains `@line-height` and `@scroll-bar-size` 
 
 ## Screenshots
 
-The font used in the screenshots is "Segoe UI Mono Regular".
+The font used in the screenshots is "DejaVu Sans Mono".
 
-### HTML
+### HTML & CSS
 
-![HTML Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/html.png)
+![HTML & CSS Screenshot](https://bitbucket.org/morrisallison/brackets-mystique-theme/raw/default/screenshots/html-css.png)
 
-### LESS / CSS
+### JavaScript & PHP
 
-![LESS / CSS Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/less.png)
-
-### JavaScript
-
-![JavaScript Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/js.png)
-
-### PHP
-
-![PHP Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/php.png)
-
-### Markdown
-
-![Markdown Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/md.png)
-
-### JSON
-
-![JSON Screenshot](https://bitbucket.org/web2nr/brackets-mystique-theme/raw/default/screenshots/json.png)
+![JavaScript & PHP Screenshot](https://bitbucket.org/morrisallison/brackets-mystique-theme/raw/default/screenshots/js-php.png)
 
 ## License
 

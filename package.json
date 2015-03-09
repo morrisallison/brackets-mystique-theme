@@ -1,18 +1,18 @@
 {
 	"name": "brackets-mystique-theme",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"title": "Mystique",
 	"description": "A soft, dark theme that makes code look good.",
-	"homepage": "https://bitbucket.org/web2nr/brackets-mystique-theme",
+	"homepage": "https://bitbucket.org/morrisallison/brackets-mystique-theme",
 	"author": {
 		"name": "Morris Allison III",
-		"email": "hello@morrisallison.com",
-		"url": "https://bitbucket.org/web2nr"
+		"email": "author@morrisallison.com",
+		"url": "https://bitbucket.org/morrisallison"
 	},
 	"license": "MIT",
 	"screenshot": "screenshots/js.png",
 	"engines": {
-		"brackets": ">=0.44.0"
+		"brackets": ">=1.2.0"
 	},
 	"theme": {
 		"file": "main.less",
