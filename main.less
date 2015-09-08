@@ -34,6 +34,8 @@
 @inline-widget-background-color: #222525;
 @search-outline-color: #dea919;
 @activeline-background: #333a3f;
+@search-background-color-inverse: #0087af;
+@search-outline-color-inverse: #0087af;
 
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
@@ -216,8 +218,8 @@
 	border-bottom: none;
 
 	&.searching-current-match {
-		background-color: spin(@search-background-color, 150);
-		outline-color: spin(@search-outline-color, 150);
+		background-color: @search-background-color-inverse;
+		outline-color: @search-outline-color-inverse;
 	}
 }
 
