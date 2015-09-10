@@ -6,7 +6,8 @@
     \/    \/\__, |___/\__|_|\__, |\__,_|\___|
             |___/              |_|           
 
-	https://bitbucket.org/morrisallison/brackets-mystique-theme
+	Mercurial Canonical: https://bitbucket.org/morrisallison/brackets-mystique-theme
+	Git Mirror: https://github.com/morrisallison/brackets-mystique-theme
 	Copyright (c) 2015 Morris Allison III <author@morrisallison.com>
 	Released under the MIT License.
 */
@@ -27,13 +28,15 @@
 }
 
 @neutral-color: #cacdd3;
-@background-color: #292d2f;
 @line-color: #5b6469;
+@background-color: #292d2f;
 @inline-line-color: #454b4e;
-@search-background-color: #af7f00;
 @inline-widget-background-color: #222525;
+@search-background-color: #af7f00;
 @search-outline-color: #dea919;
 @activeline-background: #333a3f;
+@search-background-color-inverse: #0087af;
+@search-outline-color-inverse: #0087af;
 
 // ------------------------------------------------------------
 //    Editor / Syntax Highlighting
@@ -216,8 +219,8 @@
 	border-bottom: none;
 
 	&.searching-current-match {
-		background-color: spin(@search-background-color, 150);
-		outline-color: spin(@search-outline-color, 150);
+		background-color: @search-background-color-inverse;
+		outline-color: @search-outline-color-inverse;
 	}
 }
 
@@ -416,6 +419,11 @@
 .tickmark-track .tickmark {
 	background-color: @search-background-color;
 	border-color: @search-outline-color;
+	
+	&.tickmark-current {
+		background-color: @search-background-color-inverse;
+		border-color: @search-outline-color-inverse;
+	}
 }
 
 // ------------------------------------------------------------

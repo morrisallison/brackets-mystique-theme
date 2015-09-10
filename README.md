@@ -9,7 +9,6 @@ Styles have been added to support the following extensions:
 * QuickDocsJS
 * QuickDocsPHP
 * JavaScript Globals
-* Code Folding
 
 ### Options
 
@@ -30,7 +29,3 @@ The font used in the screenshots is "DejaVu Sans Mono".
 ## License
 
 Released under the MIT license.
-
-------------------------------------------------------------
-
-### (^_^)
