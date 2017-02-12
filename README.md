@@ -1,5 +1,7 @@
 # Mystique
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/morrisallison/brackets-mystique-theme.svg)](https://greenkeeper.io/)
+
 Mystique theme for [Brackets](http://brackets.io/). A style that I have pieced together over years.
 
 Requires Brackets version 1.2.0 or later. You can install this theme via the Extension Manager within Brackets.
